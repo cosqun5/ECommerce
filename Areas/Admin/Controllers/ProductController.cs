@@ -1,21 +1,20 @@
-﻿using DataAccess.Concrate;
-using Business.Concrate;
-using Entities.Concrate;
+﻿
 using Furn.Areas.Admin.Utilites.Extensions;
 using Furn.Areas.Admin.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using DataAccess.EntityFramework;
+using Furn.Models;
+using Furn.DAL;
 
 namespace Furn.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class ProductController : Controller
     {
-        private readonly Context _context;
+        private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _environment;
-        public ProductController(Context context, IWebHostEnvironment enviroment)
+        public ProductController(AppDbContext context, IWebHostEnvironment enviroment)
         {
             _context = context;
             _environment = enviroment;

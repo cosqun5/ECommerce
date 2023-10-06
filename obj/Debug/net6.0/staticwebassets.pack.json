@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\LENOVO\\Desktop\\Furn\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Furn.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Furn.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\furn-master\\LICENSE",
       "PackagePath": "staticwebassets\\furn-master"
     },
@@ -345,6 +341,14 @@
       "PackagePath": "staticwebassets\\skydash\\images\\0f411b0e-793d-46e5-90bc-ee0494c060e65x5.jpg"
     },
     {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\2019b6ac-32c9-49e8-a04b-269795d1c2a65x5.jpg",
+      "PackagePath": "staticwebassets\\skydash\\images\\2019b6ac-32c9-49e8-a04b-269795d1c2a65x5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\703581d6-e0c6-417e-b9e1-a0d5b4613622IMG-20230429-WA0033.jpg",
+      "PackagePath": "staticwebassets\\skydash\\images\\703581d6-e0c6-417e-b9e1-a0d5b4613622IMG-20230429-WA0033.jpg"
+    },
+    {
       "Id": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\auth\\lockscreen-bg.jpg",
       "PackagePath": "staticwebassets\\skydash\\images\\auth\\lockscreen-bg.jpg"
     },
@@ -355,6 +359,10 @@
     {
       "Id": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\auth\\register-bg.jpg",
       "PackagePath": "staticwebassets\\skydash\\images\\auth\\register-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\c93c12d3-a6d2-48d7-af4e-7ec338ff9f07IMG-20230429-WA0033.jpg",
+      "PackagePath": "staticwebassets\\skydash\\images\\c93c12d3-a6d2-48d7-af4e-7ec338ff9f07IMG-20230429-WA0033.jpg"
     },
     {
       "Id": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\dashboard\\people.svg",

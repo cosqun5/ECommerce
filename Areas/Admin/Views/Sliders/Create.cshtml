@@ -1,0 +1,46 @@
+﻿@model CreateSliderVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Default form</h4>
+            <p class="card-description">
+                Basic form layout
+            </p>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="form-label"></label>
+                    <input asp-for="Description" class="form-control">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="InitialPrice" class="form-label"></label>
+                    <input asp-for="InitialPrice" class="form-control">
+                    <span asp-validation-for="InitialPrice"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FinalPrice" class="form-label"></label>
+                    <input asp-for="FinalPrice" class="form-control">
+                    <span asp-validation-for="FinalPrice"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Photo" class="form-label"></label>
+                    <input asp-for="Photo" class="form-control">
+                    <span asp-validation-for="Photo"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+

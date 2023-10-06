@@ -1,4 +1,5 @@
-﻿@model List<Product>
+﻿@using Furn.Models;
+@model List<Product>
 @{
 	ViewData["Title"] = "Index";
 	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -20,8 +21,8 @@
 							<th>Description</th>
 							<th>Price</th>
 							<th>Image</th>
-							<th>Update</th>
 							<th>Delete</th>
+							<th>Update</th>
 						</tr>
 					</thead>
 					<tbody>

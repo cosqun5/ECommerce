@@ -1,4 +1,4 @@
-using DataAccess.Concrate;
+using Furn.DAL;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -15,7 +15,7 @@ namespace Furn
 
 
 
-            builder.Services.AddDbContext<Context>(options =>
+            builder.Services.AddDbContext<AppDbContext>(options =>
                             options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
             var app = builder.Build();

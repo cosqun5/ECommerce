@@ -1,0 +1,60 @@
+﻿@model List<Slider>
+<div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+	<!--/.carousel-indicator -->
+	<ol class="carousel-indicators">
+		@for (int i = 0; i < Model.Count; i++)
+		{
+			<li data-target="#header-carousel" data-slide-to="@i" class="@(Model[i].IsActive?"active":"")"><span class="small-circle"></span></li>
+
+		}
+	</ol><!-- /ol-->
+	<div class="carousel-inner" role="listbox">
+		@foreach (Slider slider in Model)
+		{
+			<div class="item active @(slider.IsActive?"active":"")">
+				<div class="single-slide-item slide1">
+					<div class="container">
+						<div class="welcome-hero-content">
+							<div class="row">
+								<div class="col-sm-7">
+									<div class="single-welcome-hero">
+										<div class="welcome-hero-txt">
+											<h4>great design collection</h4>
+											<h2>@slider.Name</h2>
+											<p>
+												@slider.Description
+											</p>
+											<div class="packages-price">
+												<p>
+													$ @slider.FinalPrice
+													<del>$ @slider.InitialPrice</del>
+												</p>
+											</div>
+											<button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
+												<span class="lnr lnr-plus-circle"></span>
+												add <span>to</span> cart
+											</button>
+											<button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
+												more info
+											</button>
+										</div><!--/.welcome-hero-txt-->
+									</div><!--/.single-welcome-hero-->
+								</div><!--/.col-->
+								<div class="col-sm-5">
+									<div class="single-welcome-hero">
+										<div class="welcome-hero-img">
+											<img src="~/skydash/images/@slider.ImagePath" alt="slider image">
+										</div><!--/.welcome-hero-txt-->
+									</div><!--/.single-welcome-hero-->
+								</div><!--/.col-->
+							</div><!--/.row-->
+						</div><!--/.welcome-hero-content-->
+					</div><!-- /.container-->
+				</div><!-- /.single-slide-item-->
+
+			</div>
+
+		}
+
+	</div><!-- /.carousel-inner-->
+</div>

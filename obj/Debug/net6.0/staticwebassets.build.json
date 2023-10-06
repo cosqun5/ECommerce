@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zCFvc5yNEzXU5xVvNPjAfHOlBow+mlcifoyK/kvU/Ls=",
+  "Hash": "sxZTzAwv72D/CL9UGVBPxzegv56jDsUwrdDUz5liTpg=",
   "Source": "Furn",
   "BasePath": "_content/Furn",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\LENOVO\\Desktop\\Furn\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Furn.styles.css",
-      "SourceId": "Furn",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\Furn\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/Furn",
-      "RelativePath": "Furn.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\LENOVO\\Desktop\\Furn\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Furn.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\LENOVO\\Desktop\\Furn\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Furn.bundle.scp.css",
-      "SourceId": "Furn",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\Furn\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/Furn",
-      "RelativePath": "Furn.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\LENOVO\\Desktop\\Furn\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Furn.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\furn-master\\assets\\css\\animate.css",
       "SourceId": "Furn",
@@ -1496,6 +1462,40 @@
       "OriginalItemSpec": "wwwroot\\skydash\\images\\0f411b0e-793d-46e5-90bc-ee0494c060e65x5.jpg"
     },
     {
+      "Identity": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\2019b6ac-32c9-49e8-a04b-269795d1c2a65x5.jpg",
+      "SourceId": "Furn",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\",
+      "BasePath": "_content/Furn",
+      "RelativePath": "skydash/images/2019b6ac-32c9-49e8-a04b-269795d1c2a65x5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\skydash\\images\\2019b6ac-32c9-49e8-a04b-269795d1c2a65x5.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\703581d6-e0c6-417e-b9e1-a0d5b4613622IMG-20230429-WA0033.jpg",
+      "SourceId": "Furn",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\",
+      "BasePath": "_content/Furn",
+      "RelativePath": "skydash/images/703581d6-e0c6-417e-b9e1-a0d5b4613622IMG-20230429-WA0033.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\skydash\\images\\703581d6-e0c6-417e-b9e1-a0d5b4613622IMG-20230429-WA0033.jpg"
+    },
+    {
       "Identity": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\auth\\lockscreen-bg.jpg",
       "SourceId": "Furn",
       "SourceType": "Discovered",
@@ -1545,6 +1545,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\skydash\\images\\auth\\register-bg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\c93c12d3-a6d2-48d7-af4e-7ec338ff9f07IMG-20230429-WA0033.jpg",
+      "SourceId": "Furn",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\",
+      "BasePath": "_content/Furn",
+      "RelativePath": "skydash/images/c93c12d3-a6d2-48d7-af4e-7ec338ff9f07IMG-20230429-WA0033.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\skydash\\images\\c93c12d3-a6d2-48d7-af4e-7ec338ff9f07IMG-20230429-WA0033.jpg"
     },
     {
       "Identity": "C:\\Users\\LENOVO\\Desktop\\Furn\\wwwroot\\skydash\\images\\dashboard\\people.svg",

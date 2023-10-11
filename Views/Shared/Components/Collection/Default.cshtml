@@ -1,0 +1,25 @@
+﻿@model List<Collection>
+<section id="sofa-collection">
+	<div class="owl-carousel owl-theme" id="collection-carousel">
+		@foreach (var item in Model)
+		{
+
+			<div class="sofa-collection collectionbg1" style="background-color: red; !important">
+				<div class="container">
+					<div class="sofa-collection-txt">
+						<h2>@item.Title</h2>
+						<p>
+							@item.Description
+						</p>
+						<div class="sofa-collection-price">
+							<h4>starting from <span>$ @item.Price</span></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--/.sofa-collection-->
+		}
+	</div><!--/.collection-carousel-->
+
+</section>

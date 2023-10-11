@@ -1376,12 +1376,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\2019b6ac-32c9-49e8-a04b-269795d1c2a65x5.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\703581d6-e0c6-417e-b9e1-a0d5b4613622IMG-20230429-WA0033.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\ac3a2de2-0639-4bc9-ad33-68dda6613d9csofa.png))">
       <SourceType>Package</SourceType>
       <SourceId>Furn</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Furn</BasePath>
-      <RelativePath>skydash/images/703581d6-e0c6-417e-b9e1-a0d5b4613622IMG-20230429-WA0033.jpg</RelativePath>
+      <RelativePath>skydash/images/ac3a2de2-0639-4bc9-ad33-68dda6613d9csofa.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1390,7 +1390,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\703581d6-e0c6-417e-b9e1-a0d5b4613622IMG-20230429-WA0033.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\ac3a2de2-0639-4bc9-ad33-68dda6613d9csofa.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\auth\lockscreen-bg.jpg))">
       <SourceType>Package</SourceType>
@@ -1440,6 +1440,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\auth\register-bg.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\c0038c64-ca6d-45a9-9920-f0fe7dd5230dsofa2.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Furn</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Furn</BasePath>
+      <RelativePath>skydash/images/c0038c64-ca6d-45a9-9920-f0fe7dd5230dsofa2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\c0038c64-ca6d-45a9-9920-f0fe7dd5230dsofa2.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\c93c12d3-a6d2-48d7-af4e-7ec338ff9f07IMG-20230429-WA0033.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Furn</SourceId>
@@ -1455,6 +1471,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\c93c12d3-a6d2-48d7-af4e-7ec338ff9f07IMG-20230429-WA0033.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\d06f8d6a-8813-47a3-912a-8f29f644d0a4sofa.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Furn</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Furn</BasePath>
+      <RelativePath>skydash/images/d06f8d6a-8813-47a3-912a-8f29f644d0a4sofa.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\d06f8d6a-8813-47a3-912a-8f29f644d0a4sofa.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\dashboard\people.svg))">
       <SourceType>Package</SourceType>
@@ -1520,6 +1552,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\dashboard\shape-4.svg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\e4fcd7db-2d52-4301-9c89-6b686b26e003sofa2.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Furn</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Furn</BasePath>
+      <RelativePath>skydash/images/e4fcd7db-2d52-4301-9c89-6b686b26e003sofa2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\e4fcd7db-2d52-4301-9c89-6b686b26e003sofa2.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\eabe7810-81bf-421b-b736-a107d89a5802IMG-20230429-WA0033.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Furn</SourceId>
@@ -1535,6 +1583,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\eabe7810-81bf-421b-b736-a107d89a5802IMG-20230429-WA0033.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\f8c11824-9643-469d-ab0c-5cf9e79dd58fsofa.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Furn</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Furn</BasePath>
+      <RelativePath>skydash/images/f8c11824-9643-469d-ab0c-5cf9e79dd58fsofa.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\f8c11824-9643-469d-ab0c-5cf9e79dd58fsofa.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\faces\face1.jpg))">
       <SourceType>Package</SourceType>

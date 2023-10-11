@@ -14,6 +14,8 @@ namespace Furn.DAL
 		public DbSet<Product> Products { get; set; }
 		public DbSet<FeaturedProduct> FeaturedProducts { get; set; }
 		public DbSet<Slider> Sliders { get; set; }
+		public DbSet<Collection> Collections { get; set; }
+		public DbSet <NewDesign> NewDesigns { get; set; } 
 
 	}
 }

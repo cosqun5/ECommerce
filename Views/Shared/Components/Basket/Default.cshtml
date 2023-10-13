@@ -1,0 +1,32 @@
+﻿@using Furn.ViewModel
+@model List<BasketItemVM>
+@{
+    Layout = null;
+}
+
+<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="lnr lnr-cart"></span>
+		<span class="badge badge-bg-1">@Model.Sum(s=>s.ProductCount)</span>
+	</a>
+	<ul class="dropdown-menu cart-list s-cate">
+		@foreach (BasketItemVM basket in Model)
+		{
+			<li class="single-cart-list">
+				<a href="#" class="photo"><img src="~/skydash/images/@basket.ImagePath" height="150" class="cart-thumb" alt="image" /></a>
+				<div class="cart-list-txt">
+					<h6>@basket.Name</h6>
+					<p>@basket.ProductCount x - <span class="price">$@basket.Price</span></p>
+				</div><!--/.cart-list-txt-->
+				<div class="cart-close">
+					<a asp-action="RemoveBasket" asp-controller="Basket" asp-route-Id="@basket.Id"><span class="lnr lnr-cross"></span></a>
+				</div><!--/.cart-close-->
+			</li>
+		}
+		<!--/.single-cart-list -->
+		<li class="total">
+			<span>Total: $ @Model.Sum(s=>s.Price*s.ProductCount)</span>
+			<button class="btn-cart pull-right" onclick="window.location.href='#'">view cart</button>
+		</li>
+	</ul>
+</li>

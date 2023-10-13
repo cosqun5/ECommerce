@@ -1,0 +1,40 @@
+﻿@using Furn.Models
+@model List<FeaturedProduct>
+@{
+	Layout = null;
+}
+
+<section id="feature" class="feature">
+	<div class="container">
+		<div class="section-header">
+			<h2>featured products</h2>
+		</div><!--/.section-header-->
+		<div class="feature-content">
+			<div class="row">
+				@foreach (FeaturedProduct item in Model)
+				{
+
+					<div class="col-sm-3">
+						<div class="single-feature">
+							<img src="~/skydash/images/@item.ImagePath" alt="feature image">
+							<div class="single-feature-txt text-center">
+								<p>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<span class="spacial-feature-icon"><i class="fa fa-star"></i></span>
+									<span class="feature-review">(45 review)</span>
+								</p>
+								<h3><a href="#">@item.Name</a></h3>
+								<h5>$@item.Price</h5>
+							</div>
+						</div>
+					</div>
+				}
+
+			</div>
+		</div>
+	</div><!--/.container-->
+
+</section>

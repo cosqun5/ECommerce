@@ -2,12 +2,14 @@
 using Furn.Areas.Admin.ViewModels;
 using Furn.DAL;
 using Furn.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Furn.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class BlogsController : Controller
     {
         private readonly AppDbContext _context;

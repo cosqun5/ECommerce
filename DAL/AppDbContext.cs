@@ -1,10 +1,11 @@
 ﻿using Furn.Models;
+using Furn.Models.Auth;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Furn.DAL
 {
-	public class AppDbContext: IdentityDbContext
+	public class AppDbContext: IdentityDbContext<AppUser>
 	{
 		public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
 		{
@@ -16,6 +17,7 @@ namespace Furn.DAL
 		public DbSet<Slider> Sliders { get; set; }
 		public DbSet<Collection> Collections { get; set; }
 		public DbSet <NewDesign> NewDesigns { get; set; } 
+		public DbSet<Message> Messages { get; set; }	
 
 	}
 }

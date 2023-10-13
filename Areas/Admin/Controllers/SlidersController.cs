@@ -2,6 +2,7 @@
 using Furn.Areas.Admin.ViewModels;
 using Furn.DAL;
 using Furn.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,7 +10,8 @@ namespace Furn.Areas.Admin.Controllers
 {
 
 		[Area("Admin")]
-		public class SlidersController : Controller
+        [Authorize]
+    public class SlidersController : Controller
 		{
 			private readonly AppDbContext _context;
 			private readonly IWebHostEnvironment _environment;

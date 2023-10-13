@@ -1,0 +1,42 @@
+﻿@using Furn.Models
+@model List<Product>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section id="new-arrivals" class="new-arrivals">
+	<div class="container">
+		<div class="section-header">
+			<h2>Product</h2>
+		</div><!--/.section-header-->
+		<div class="new-arrivals-content">
+			<div class="row">
+				@foreach (Product item in Model)
+				{
+
+					<div class="col-md-3 col-sm-4">
+						<div class="single-new-arrival">
+							<div class="single-new-arrival-bg">
+								<img src="~/skydash/images/@item.ImagePath" alt="new-arrivals images">
+								<div class="single-new-arrival-bg-overlay"></div>
+								<div class="new-arrival-cart">
+									<p>
+										<span class="lnr lnr-cart"></span>
+										<a asp-action="AddBasket" asp-controller="Basket" asp-route-id="@item.Id">add <span>to </span> cart</a>
+									</p>
+									<p class="arrival-review pull-right">
+										<span class="lnr lnr-heart"></span>
+										<span class="lnr lnr-frame-expand"></span>
+									</p>
+								</div>
+							</div>
+							<h4><a href="#">@item.Name</a></h4>
+							<p class="arrival-product-price">$@item.Price</p>
+						</div>
+					</div>
+				}
+
+			</div>
+		</div>
+	</div><!--/.container-->
+</section>

@@ -6,10 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using Furn.Models;
 using Furn.DAL;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Furn.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly AppDbContext _context;

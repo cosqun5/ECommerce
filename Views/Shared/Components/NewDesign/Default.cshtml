@@ -1,0 +1,34 @@
+﻿@using Furn.Models
+@model List<NewDesign>
+@{
+	Layout = null;
+}
+
+<section id="populer-products" class="populer-products">
+	<div class="container">
+		<div class="populer-products-content">
+			<div class="row">
+				@foreach (var item in Model)
+				{
+
+					<div class="col-md-3">
+						<div class="single-populer-products">
+							<div class="single-populer-product-img mt40">
+								<img src="~/skydash/images/@item.ImagePath" alt="populer-products images">
+							</div>
+							<h2><a href="#">@item.Name</a></h2>
+							<div class="single-populer-products-para">
+								<p>@item.Description</p>
+							</div>
+						</div>
+					</div>
+				}
+
+
+			</div>
+		</div>
+	</div><!--/.container-->
+
+</section>
+
+

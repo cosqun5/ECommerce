@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -71,11 +72,13 @@
 					<!-- Start Top Search -->
 					<div class="top-search">
 						<div class="container">
-							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-search"></i></span>
-								<input type="text" class="form-control" placeholder="Search">
-								<span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-							</div>
+							<form asp-action="Index" asp-controller="ProductSearch" method="get">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-search"></i></span>
+									<input type="text" class="form-control" placeholder="Search" name="searchString">
+									<span class="input-group-addon close-search" type="submit"><i class="fa fa-times"></i></span>
+								</div>
+							</form>
 						</div>
 					</div>
 					<!-- End Top Search -->
@@ -87,16 +90,28 @@
 								<li class="search">
 									<a href="#"><span class="lnr lnr-magnifier"></span></a>
 								</li><!--/.search-->
-								<li class="nav-setting">
-									<a href="#"><span class="lnr lnr-cog"></span></a>
-								</li><!--/.search-->
 								<li class="dropdown">
-									<a  asp-controller="Basket" asp-action="Index" class="dropdown-toggle" data-toggle="dropdown">
-										<span class="lnr lnr-cart"></span>
+									<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+										<span class="lnr lnr-cog"></span>
 									</a>
-								</li><!--/.dropdown-->
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										@if (User.Identity.IsAuthenticated)
+										{
+											<li><a class="dropdown-item">@User.Identity.Name</a></li>
+											<li><a class="dropdown-item" asp-action="LogOut" asp-controller="Account">LogOut</a></li>
+										}
+										else
+										{
+											<li><a class="dropdown-item" asp-action="Login" asp-controller="Account">Login</a></li>
+										}
+									</ul>
+								</li>
+								@await Component.InvokeAsync("Basket")
+								<!--/.dropdown-->
 							</ul>
-						</div><!--/.attr-nav-->
+						</div>
+
+						<!--/.attr-nav-->
 						<!-- End Atribute Navigation -->
 						<!-- Start Header Navigation -->
 						<div class="navbar-header">
@@ -105,7 +120,9 @@
 							</button>
 							<a class="navbar-brand" href="index.html">sine<span>mkt</span>.</a>
 
-						</div><!--/.navbar-header-->
+						</div>
+
+						<!--/.navbar-header-->
 						<!-- End Header Navigation -->
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
@@ -116,63 +133,81 @@
 								<li class="scroll"><a href="#blog">blog</a></li>
 								<li class="scroll"><a href="#newsletter">contact</a></li>
 							</ul><!--/.nav -->
-						</div><!-- /.navbar-collapse -->
-					</div><!--/.container-->
-				</nav><!--/nav-->
+						</div>
+
+						<!-- /.navbar-collapse -->
+					</div>
+
+					<!--/.container-->
+				</nav>
+
+				<!--/nav-->
 				<!-- End Navigation -->
-			</div><!--/.header-area-->
+			</div>
+
+			<!--/.header-area-->
 			<div class="clearfix"></div>
 
-		</div><!-- /.top-area-->
-		</header>
-        @RenderBody()
-		<footer id="footer" class="footer">
-			<div class="container">
-				<div class="hm-footer-copyright text-center">
-					<div class="footer-social">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-instagram"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>
-					</div>
-					<p>
-						&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
-					</p><!--/p-->
-				</div><!--/.text-center-->
-			</div><!--/.container-->
+		</div>
 
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+		<!-- /.top-area-->
+	</header>
+
+	<br />
+
+	@RenderBody()
+	<br />
+	<br />
+	<br />
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="hm-footer-copyright text-center">
+				<div class="footer-social">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-pinterest"></i></a>
+					<a href="#"><i class="fa fa-behance"></i></a>
 				</div>
+				<p>
+					&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+				</p><!--/p-->
+			</div><!--/.text-center-->
+		</div><!--/.container-->
 
-			</div><!--/.scroll-Top-->
+		<div id="scroll-Top">
+			<div class="return-to-top">
+				<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+			</div>
 
-		</footer><!--/.footer-->
-		<!--footer end-->
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+		</div><!--/.scroll-Top-->
 
-		<script src="~/furn-master/assets/js/jquery.js"></script>
+	</footer>
 
-		<!--modernizr.min.js-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<!--/.footer-->
+	<!--footer end-->
+	<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
-		<!--bootstrap.min.js-->
-		<script src="~/furn-master/assets/js/bootstrap.min.js"></script>
+	<script src="~/furn-master/assets/js/jquery.js"></script>
 
-		<!-- bootsnav js -->
-		<script src="~/furn-master/assets/js/bootsnav.js"></script>
+	<!--modernizr.min.js-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
-		<!--owl.carousel.js-->
-		<script src="~/furn-master/assets/js/owl.carousel.min.js"></script>
+	<!--bootstrap.min.js-->
+	<script src="~/furn-master/assets/js/bootstrap.min.js"></script>
+
+	<!-- bootsnav js -->
+	<script src="~/furn-master/assets/js/bootsnav.js"></script>
+
+	<!--owl.carousel.js-->
+	<script src="~/furn-master/assets/js/owl.carousel.min.js"></script>
 
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
 
-		<!--Custom JS-->
-		<script src="~/furn-master/assets/js/custom.js"></script>
+	<!--Custom JS-->
+	<script src="~/furn-master/assets/js/custom.js"></script>
 
 </body>
 

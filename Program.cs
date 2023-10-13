@@ -1,4 +1,6 @@
 using Furn.DAL;
+using Furn.Models.Auth;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -13,12 +15,31 @@ namespace Furn
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+			builder.Services.AddIdentity<AppUser, IdentityRole>()
+						   .AddEntityFrameworkStores<AppDbContext>()
+						   .AddDefaultTokenProviders();
 
+			builder.Services.Configure<IdentityOptions>(opt =>
+			{
+				opt.Password.RequiredLength = 8;
+				opt.Password.RequireNonAlphanumeric = true;
+				opt.Password.RequireDigit = true;
+				opt.Password.RequireLowercase = true;
+				opt.Password.RequireUppercase = true;
 
-            builder.Services.AddDbContext<AppDbContext>(options =>
+				opt.User.RequireUniqueEmail = true;
+
+				opt.Lockout.MaxFailedAccessAttempts = 3;
+				opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+				opt.Lockout.AllowedForNewUsers = true;
+			});
+
+			builder.Services.AddDbContext<AppDbContext>(options =>
                             options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
-            var app = builder.Build();
+            //builder.Services.AddTransient<IEmailSender,EmailSender>
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -32,8 +53,8 @@ namespace Furn
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseAuthorization();
+			app.UseAuthentication();
+			app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

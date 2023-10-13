@@ -822,8 +822,15 @@ span.feature-review {margin-left: 10px;}
     display: flex;
     align-items: center;
     height: 220px;
+    position:relative;
+    z-index:-10;
 }
-.clients .item {text-align: center;}
+.navbar{
+    position:fixed;
+}
+.clients .item {
+    text-align: center;
+}
 /*-------------------------------------
         10. News-letter
 --------------------------------------*/
@@ -870,9 +877,9 @@ span.feature-review {margin-left: 10px;}
     box-shadow:0 5px 15px rgba(0,0,0,.2);
     border:0;
 }
-.foot-email-box input[type="text"]{
+.foot-email-box input{
     font-size: 14px;
-    color: #bcb7b2;
+    color: black;
 }
 .foot-email-subscribe {
     position: absolute;

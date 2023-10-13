@@ -1,0 +1,38 @@
+﻿@using Furn.Models
+@model List<Blog>
+@{
+	Layout = null;
+}
+
+<section id="blog" class="blog">
+	<div class="container">
+		<div class="section-header">
+			<h2>latest blog</h2>
+		</div><!--/.section-header-->
+		<div class="blog-content">
+			<div class="row">
+				@foreach (Blog item in Model)
+				{
+
+					<div class="col-sm-4">
+						<div class="single-blog">
+							<div class="single-blog-img">
+								<img src="~/skydash/images/@item.ImagePath" alt="blog image">
+								<div class="single-blog-img-overlay"></div>
+							</div>
+							<div class="single-blog-txt">
+								<h2><a href="#">@item.Title</a></h2>
+								<h3>  @item.DateTime</h3>
+								<p>
+									@item.Description
+								</p>
+							</div>
+						</div>
+
+					</div>
+				}
+			</div>
+		</div>
+	</div><!--/.container-->
+
+</section>

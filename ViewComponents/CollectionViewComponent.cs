@@ -17,7 +17,9 @@ namespace Furn.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             List<Collection> collections = await _appDbContext.Collections.ToListAsync();
-            return View(collections);
+           
+
+			return View(collections);
         }
     }
 }

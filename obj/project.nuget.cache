@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P9CFczxqxfhd7UGprAzQIbySI5mekTzZYOdxoU9TId+2fl2wr51oXFyydlNHelBfyrs3JPPqzIjqwx8WFXgj3A==",
+  "dgSpecHash": "Bh07TK+0kRPxt2y2r15Gg9y0eqYNX9WJWwKmi26hyF2voQzl3Ka+chwDn1otZYMpX6MQ0MNoa7QBkGmq5QxrOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\Furn\\Furn.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\EcommerceC-\\Furn\\Furn.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

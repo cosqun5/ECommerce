@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\Furn\\Furn.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\EcommerceC-\\Furn\\Furn.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\Furn\\Furn.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\EcommerceC-\\Furn\\Furn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Furn\\Furn.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\EcommerceC-\\Furn\\Furn.csproj",
         "projectName": "Furn",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\Furn\\Furn.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\EcommerceC-\\Furn\\Furn.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\Furn\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\EcommerceC-\\Furn\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

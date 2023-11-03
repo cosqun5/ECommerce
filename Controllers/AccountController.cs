@@ -1,4 +1,5 @@
-﻿using Furn.Models;
+﻿using Furn.DAL;
+using Furn.Models;
 using Furn.Models.Auth;
 using Furn.Models.Interface;
 using Furn.ViewModel;
@@ -6,6 +7,7 @@ using Furn.ViewModel.Auth;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Furn.Controllers
 {
@@ -15,16 +17,23 @@ namespace Furn.Controllers
 		private readonly SignInManager<AppUser> _signInManager;
 		private readonly RoleManager<IdentityRole> _roleManager;
 		private readonly IEmailSender _emailSender;
+		private readonly AppDbContext _context;
 
 
-		public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
+		public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, AppDbContext context)
 		{
 			_userManager = userManager;
 			_signInManager = signInManager;
 			_roleManager = roleManager;
+			_context = context;
 		}
+		public async Task<IActionResult> Index(string id)
+        {
+			var users = await _context.Users.FindAsync(id);
 
-		public IActionResult Register()
+			return View(users);
+		}
+        public IActionResult Register()
 		{
 			return View();
 		}

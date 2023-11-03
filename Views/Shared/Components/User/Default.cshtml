@@ -1,0 +1,17 @@
+﻿@using Furn.Models.Auth
+@model List<AppUser>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    @if (User.Identity.IsAuthenticated)
+    {
+        var currentUser = Model.FirstOrDefault(user => user.UserName == User.Identity.Name);
+        if (currentUser != null)
+        {
+            <li><a class="dropdown-item" asp-action="Index" asp-controller="Account" asp-route-Id="@currentUser.Id">@User.Identity.Name</a></li>
+        }
+        <li><a class="dropdown-item" asp-action="LogOut" asp-controller="Account">LogOut</a></li>
+    }
+    else
+    {
+        <li><a class="dropdown-item" asp-action="Login" asp-controller="Account">Login</a></li>
+    }
+</ul>

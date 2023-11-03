@@ -1520,22 +1520,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\6df3cc05-efc6-4d7f-af0e-cb0c1dfffa1farm chair2.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\780e4781-0d8e-4e6f-857f-718095108241arrivals6.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>Furn</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Furn</BasePath>
-      <RelativePath>skydash/images/780e4781-0d8e-4e6f-857f-718095108241arrivals6.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\780e4781-0d8e-4e6f-857f-718095108241arrivals6.png))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\skydash\images\81ccaf3b-194d-48c6-8992-6cf7fbe423e5slider2.png))">
       <SourceType>Package</SourceType>
       <SourceId>Furn</SourceId>

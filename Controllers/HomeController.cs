@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Furn.Controllers
 {
+
 	public class HomeController : Controller
 	{
 		private readonly AppDbContext _context;

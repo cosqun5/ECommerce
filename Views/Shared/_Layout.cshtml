@@ -94,17 +94,8 @@
 									<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
 										<span class="lnr lnr-cog"></span>
 									</a>
-									<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-										@if (User.Identity.IsAuthenticated)
-										{
-											<li><a class="dropdown-item">@User.Identity.Name</a></li>
-											<li><a class="dropdown-item" asp-action="LogOut" asp-controller="Account">LogOut</a></li>
-										}
-										else
-										{
-											<li><a class="dropdown-item" asp-action="Login" asp-controller="Account">Login</a></li>
-										}
-									</ul>
+									@await Component.InvokeAsync("User")
+
 								</li>
 								@await Component.InvokeAsync("Basket")
 								<!--/.dropdown-->
@@ -166,8 +157,6 @@
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-instagram"></i></a>
 					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-pinterest"></i></a>
-					<a href="#"><i class="fa fa-behance"></i></a>
 				</div>
 				<p>
 					&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>

@@ -57,6 +57,12 @@ namespace Furn.Controllers
 				}
 				return View(registerVM);
 			}
+			var script = "Swal.fire('Təşəkkürlər', 'Qeydiyyat uğurla başa çatdı!', 'success').then(() => { window.location.href = '/Account/Login'; });";
+			TempData["Script"] = script; // TempData ilə JavaScript kodunu səhifəyə keçirin.
+
+
+			return RedirectToAction(nameof(Register));
+		}
 			//IdentityResult roleResult = await _userManager.AddToRoleAsync(newUser, UserRoles.User.ToString());
 			//if (!roleResult.Succeeded)
 			//{
@@ -66,8 +72,6 @@ namespace Furn.Controllers
 			//	}
 			//	return View(registerVM);
 			//}
-			return RedirectToAction(nameof(Login));
-		}
 		public IActionResult Login()
 		{
 			return View();

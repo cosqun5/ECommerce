@@ -33,8 +33,9 @@ namespace Furn.Controllers
 			m.Tarix = Convert.ToDateTime(DateTime.Now.ToShortDateString());
 			await _context.Messages.AddAsync(m);
 			await _context.SaveChangesAsync();
-			return RedirectToAction("Index");
 
+			// Mesaj göndərildikdən sonra, səhifə yenilənmədən SweetAlert-i göndər
+			return Json(new { success = true, message = "Mesajınız göndərildi!" });
 		}
 	}
 }

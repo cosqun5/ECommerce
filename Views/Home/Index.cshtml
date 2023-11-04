@@ -95,21 +95,21 @@
 							<h4>Contact us</h4>
 						</div><!--/.hm-foot-title-->
 						<div class="hm-foot-email">
-							<form action="~/Home/Contact/" method="post">
+							<form action="~/Home/Contact/" method="post" id="contactForm">
 								<div class="foot-email-box">
-									<input type="text" class="form-control" name="Name" placeholder="Enter Your Name ..." required>
+									<input type="text" class="form-control" id="name" name="Name" placeholder="Enter Your Name ..." required>
 								</div>
 								<br />
 								<div class="foot-email-box">
-									<input type="email" class="form-control" name="Email" placeholder="Enter Email Here...." required>
+									<input type="email" class="form-control" id="email" name="Email" placeholder="Enter Email Here...." required>
 								</div>
 								<br />
 
 								<div class="foot-email-box">
-									<input type="text" class="form-control" name="Description" placeholder="Enter Your Message ..." required>
+									<input type="text" id="message" class="form-control" name="Description" placeholder="Enter Your Message ..." required>
 								</div>
 								<br />
-								<button class="btn btn-success" style="width:100px; height:50px; font-size:15px;" type="submit"> Send </button>
+								<button class="btn btn-success" onclick="sendMessage();" style="width:100px; height:50px; font-size:15px;" type="submit"> Send </button>
 								@*<div class="foot-email-subscribe">
 								<span><i class="fa fa-location-arrow"></i></span>
 								</div>*@<!--/.foot-email-icon-->

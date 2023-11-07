@@ -48,28 +48,10 @@
 	<!--responsive.css-->
 	<link rel="stylesheet" href="~/furn-master/assets/css/responsive.css">
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
 </head>
-
 <body>
-	<!--[if lte IE 9]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-	<![endif]-->
-	<!--welcome-hero start -->
+
 	<header id="home" class="welcome-hero">
-
-
-		<!--/.carousel-indicator -->
-		<!--/.carousel-inner -->
-		@await Component.InvokeAsync("Slider")
-		<!--/#header-carousel-->
-		<!-- top-area Start -->
 		<div class="top-area">
 			<div class="header-area">
 				<!-- Start Navigation -->
@@ -100,26 +82,14 @@
 									<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
 										<span class="lnr lnr-cog"></span>
 									</a>
-									<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-										@if (User.Identity.IsAuthenticated)
-										{
-											<li><a class="dropdown-item">@User.Identity.Name</a></li>
-											<li><a class="dropdown-item" asp-action="LogOut" asp-controller="Account">LogOut</a></li>
-										}
-										else
-										{
-											<li><a class="dropdown-item" asp-action="Login" asp-controller="Account">Login</a></li>
-										}
-									</ul>
+									@await Component.InvokeAsync("User")
+
 								</li>
 								@await Component.InvokeAsync("Basket")
 								<!--/.dropdown-->
 							</ul>
 						</div>
 
-						<!--/.attr-nav-->
-						<!-- End Atribute Navigation -->
-						<!-- Start Header Navigation -->
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 								<i class="fa fa-bars"></i>
@@ -133,7 +103,7 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 							<ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-								<li class=" scroll active"><a href="#home">home</a></li>
+								<li><a asp-action="Index" asp-controller="Home">home</a></li>
 								<li><a asp-action="Index" asp-controller="Home">new arrival</a></li>
 								<li><a asp-action="Index" asp-controller="Home">features</a></li>
 								<li><a asp-action="Index" asp-controller="Home">blog</a></li>
@@ -158,8 +128,6 @@
 
 		<!-- /.top-area-->
 	</header>
-
-	<br />
 
 <section id="new-arrivals" class="new-arrivals">
 	<div class="container">
@@ -207,8 +175,7 @@
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-instagram"></i></a>
 					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-pinterest"></i></a>
-					<a href="#"><i class="fa fa-behance"></i></a>
+					
 				</div>
 				<p>
 					&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>

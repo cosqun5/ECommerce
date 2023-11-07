@@ -3,28 +3,70 @@
 @{
 	Layout = null;
 }
-
-
 @foreach (Product item in Model)
 {
-
-	<div class="col-md-3 col-sm-4">
-		<div class="single-new-arrival">
-			<div class="single-new-arrival-bg">
-				<img src="~/skydash/images/@item.ImagePath" alt="new-arrivals images">
-				<div class="single-new-arrival-bg-overlay"></div>
-				<div class="new-arrival-cart">
-					<p>
-						<span class="lnr lnr-cart"></span>
-						<a asp-action="AddBasket" asp-controller="Basket" asp-route-id="@item.Id">add <span>to </span> cart</a>
-					</p>
-					
-				</div>
-			</div>
-			<h4><a href="#">@item.Name</a></h4>
-			<p class="arrival-product-price">$@item.Price</p>
-		</div>
-	</div>
+    <div class="col-md-3 col-sm-4">
+        <div class="single-new-arrival">
+            <div class="single-new-arrival-bg">
+                <img src="~/skydash/images/@item.ImagePath" alt="new-arrivals images">
+                <div class="single-new-arrival-bg-overlay"></div>
+                <div class="new-arrival-cart">
+                    <p>
+                        <span class="lnr lnr-cart"></span>
+                        <a data-product-id="@item.Id" class="addBasketButton" href="javascript:void(0);">add <span>to</span> cart</a>
+                    </p>
+                </div>
+            </div>
+            <h4><a href="#">@item.Name</a></h4>
+            <p class="arrival-product-price">$@item.Price</p>
+        </div>
+    </div>
 }
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(function () {
+        $('.addBasketButton').click(function (e) {
+            e.preventDefault();
+
+            var productId = $(this).data('product-id');
+
+            $.ajax({
+                type: 'POST',
+                url: '/Basket/AddBasket/' + productId,
+                dataType: 'json',
+                success: function (data) {
+                    if (data.success) {
+                        // Uğurlu əməliyyat olduqda, sepeti yenileyin
+                        refreshBasket();
+                    } else {
+                        Swal.fire('Xəta', 'Əməliyyat nəzərdə tutulmadı', 'error');
+                    }
+                },
+                error: function () {
+                    Swal.fire('Xəta', 'Əməliyyat nəzərdə tutulmadı', 'error');
+                }
+            });
+        });
+
+        // Sepeti yenilemek için AJAX isteği gönderen fonksiyon
+        function refreshBasket() {
+            $.ajax({
+                type: 'GET',
+                url: '/Basket/GetBasket', // ViewComponent'i çağırmak için uygun yol
+                dataType: 'html',
+                success: function (data) {
+                    $('#basketDiv').html(data); // PartialView'i basketDiv içine ekleyin
+                },
+                error: function () {
+                    Swal.fire('Xəta', 'Sebet yenilənmədi', 'error');
+                }
+            });
+        }
+    });
+</script>
+
 
 

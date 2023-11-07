@@ -97,7 +97,12 @@
 									@await Component.InvokeAsync("User")
 
 								</li>
-								@await Component.InvokeAsync("Basket")
+								<li class="dropdown" id="basketDiv">
+
+
+									@await Component.InvokeAsync("Basket")
+								</li>
+
 								<!--/.dropdown-->
 							</ul>
 						</div>

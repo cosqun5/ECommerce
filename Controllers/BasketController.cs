@@ -81,7 +81,7 @@ namespace Furn.Controllers
 			}
 
 			HttpContext.Response.Cookies.Append(COOKIES_BASKET, JsonConvert.SerializeObject(basket));
-			return RedirectToAction("Index", "Home");
+			return Json(new { success = true, message = "Məhsul basketden silindi" });
 		}
 
 	}

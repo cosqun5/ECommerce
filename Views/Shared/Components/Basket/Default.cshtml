@@ -18,7 +18,9 @@
 					<p>@basket.ProductCount x - <span class="price">$@basket.Price</span></p>
 				</div><!--/.cart-list-txt-->
 				<div class="cart-close">
-					<a asp-action="RemoveBasket" asp-controller="Basket" asp-route-Id="@basket.Id"><span class="lnr lnr-cross"></span></a>
+				<a data-product-id="@basket.Id" class="removeBasketButton" href="javascript:void(0);"><span class="lnr lnr-cross"></span></a>
+
+					@*<a  asp-action="RemoveBasket" asp-controller="Basket" asp-route-Id="@basket.Id"><span class="lnr lnr-cross"></span></a>*@
 				</div><!--/.cart-close-->
 			</li>
 		}
@@ -28,3 +30,42 @@
 			<button class="btn-cart pull-right" onclick="window.location.href='#'">view cart</button>
 		</li>
 	</ul>
+
+	<script>
+	$('.removeBasketButton').click(function (e) {
+		e.preventDefault();
+
+		var productId = $(this).data('product-id');
+
+		$.ajax({
+			type: 'POST',
+			url: '/Basket/RemoveBasket/' + productId,
+			dataType: 'json',
+			success: function (data) {
+				if (data.success) {
+					// Mehsul uğurla silindiyse, sepeti yeniləyin
+					refreshBasket();
+				} else {
+					alert('Məhsulu silmək mümkün olmadı.');
+				}
+			},
+			error: function () {
+				alert('Məhsulu silmək mümkün olmadı.');
+			}
+		});
+	});
+	function refreshBasket() {
+		$.ajax({
+			type: 'GET',
+			url: '/Basket/GetBasket', // ViewComponent'i çağırmak için uygun yol
+			dataType: 'html',
+			success: function (data) {
+				$('#basketDiv').html(data); // PartialView'i basketDiv içine ekleyin
+			},
+			error: function () {
+				Swal.fire('Xəta', 'Sebet yenilənmədi', 'error');
+			}
+		});
+	}
+
+	</script>
